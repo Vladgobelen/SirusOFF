@@ -1,5 +1,5 @@
 #! /bin/env lua
-os.execute("sh /home/diver/Скрипты/servMesg.sh");
+os.execute("sh servMesg.sh");
 while(true) do
 local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
 
@@ -18,7 +18,7 @@ print ("успешно выполнилась команда проверки н
             print (date_time);
             --отладка
 
-            os.execute("sh /home/diver/Скрипты/alarm1.sh");
+            os.execute("sh alarm1.sh");
 
             --отладка
             local date_time = os.date()
@@ -58,7 +58,7 @@ print ("успешно выполнилась команда проверки н
     if number_data_two_stat ~= nil then
         if number_data_two_stat < 2 then
             print (number_data_two_stat);
-            os.execute("sh /home/diver/Скрипты/alarm1.sh");
+            os.execute("sh alarm1.sh");
 
             --отладка
             local date_time = os.date()
