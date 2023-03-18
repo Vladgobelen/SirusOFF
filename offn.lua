@@ -6,7 +6,7 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
     for line in two_null:lines() do
         line = tonumber (line);
         if line > 1500 then
-            os.execute("sh alarm1.sh");
+            os.execute("sh alarm.sh");
         else
         end
     end;
@@ -21,5 +21,10 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
         end
     else
     end
-    os.execute("sleep 30");
+    os.execute("sleep 5");
+    os.execute("sleep 5");
+    os.execute("sleep 5");
+    os.execute("sleep 5");
+    os.execute("sleep 5");
+    os.execute("sleep 5");
 end;
