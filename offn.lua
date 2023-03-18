@@ -21,10 +21,5 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
         end
     else
     end
-    os.execute("sleep 5");
-    os.execute("sleep 5");
-    os.execute("sleep 5");
-    os.execute("sleep 5");
-    os.execute("sleep 5");
-    os.execute("sleep 5");
+    os.execute("sleep 30");
 end;
