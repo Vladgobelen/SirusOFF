@@ -5,8 +5,9 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
 
     for line in two_null:lines() do
         line = tonumber (line);
-        if line > 1500 then
+        if line > 51500 then
             os.execute("sh alarm.sh");
+            print ("количество пакетов превышено");
         else
         end
     end;
@@ -17,6 +18,7 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
     if number_data_two_stat ~= nil then
         if number_data_two_stat < 2 then
             os.execute("sh alarm1.sh");
+            print ("строк меньше двух");
         else
         end
     else
