@@ -1,0 +1,18 @@
+DRI_PRIME=1 env DXVK_HUD=devinfo,fps,info WINEDEBUG=-all WINEPREFIX=/home/diver/WP7/PF STAGING_SHARED_MEMORY=1 DXVK_STATE_CACHE=1 STAGING_WRITECOPY=1 /home/diver/WP7/bin/wine DarkSoulsRemastered.exe
+./yt-dlp_linux -U
+./yt-dlp_linux "https://vk.com/video-50883936_456242385" -F
+./yt-dlp_linux "https://vk.com/video-50883936_456242385" -f hls-198
+cc off.c -o off
+netstat |grep "sir8.antoshin.exam:7776 ESTABLISHED" | wc -l
+netstat |grep 'sir8.antoshin.exam:7776 ESTABLISHED' | wc -l
+./yt-dlp_linux "https://vk.com/video-50883936_456242393" -F
+./yt-dlp_linux "https://vk.com/video-50883936_456242393" -f hls-199
+gcc off1.c -o off
+./off
+gcc off1.c
+gcc off.c -o off
+git status
+git add .
+git commit -a "реализау�иу� на си по у�ану�"
+git commit -m "реализау�иу� на си по у�ану�"
+exit

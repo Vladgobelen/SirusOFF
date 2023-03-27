@@ -7,7 +7,7 @@ int main()
         {
             FILE *TwoNull;
             char line[2];
-            TwoNull = popen("netstat |grep sir | awk '{print $1}'", "r");
+            TwoNull = popen("netstat |grep sir | awk '{print $2}'", "r");
             while ( fgets( line, sizeof line, TwoNull))
             {
                 long int line1 = atoi (line);
@@ -32,10 +32,10 @@ int main()
             {
                 system ("sh alarm1.sh");
                 printf ("%d\n", lineSi);
-                printf ("Строк меньше двух");
+                printf ("Строк меньше двух\n");
             }
 
-
+            system ("sleep 30");
         }
 
 }
