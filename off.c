@@ -23,21 +23,17 @@ int main()
             pclose(TwoNull);
 
             FILE *TwoStr;
-            char lineS[1];
-            size_t i;
-            int lineSi;
+            char lineS;
             TwoStr = popen("netstat |grep '7776 ESTABLISHED' | wc -l", "r");
-            i = fread(lineS, 1, sizeof(lineS), TwoStr);
+            lineS = fgetc(TwoStr);
             pclose(TwoStr);
-            lineSi = atoi (lineS);
-            if (lineSi < 2)
+            if (lineS != "2")
             {
                 system ("sh alarm1.sh");
                 printf ("Строк меньше двух\n");
-                printf ("%d\n", lineSi);
+                printf ("%c\n", lineS);
             }
-            printf ("%d\n", lineSi);
-            printf ("%ld\n", line1);
+            printf ("%c\n", lineS);
             system ("sleep 30");
         }
 
