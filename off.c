@@ -7,8 +7,8 @@ int main()
         {
             FILE *TwoNull;
             char line[2];
-            TwoNull = popen("netstat |grep sir | awk '{print $2}'", "r");
-            while ( fgets( line, sizeof line, TwoNull))
+            TwoNull = popen("netstat |grep '7776 ESTABLISHED' | awk '{print $2}'", "r");
+            while ( fread(line, 2, sizeof(line), TwoNull))
             {
                 long int line1 = atoi (line);
                 if (line1 > 50000)
@@ -28,7 +28,7 @@ int main()
             i = fread(lineS, 1, sizeof(lineS), TwoStr);
             pclose(TwoStr);
             lineSi = atoi (lineS);
-            if (lineSi != 2)
+            if (lineSi < 2)
             {
                 system ("sh alarm1.sh");
                 printf ("%d\n", lineSi);
