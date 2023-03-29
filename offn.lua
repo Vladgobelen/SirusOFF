@@ -23,5 +23,6 @@ local two_null = io.popen("netstat |grep sir | awk '{print $2}'", 'r');
         end
     else
     end
+    two_str:close();
     os.execute("sleep 30");
 end;
