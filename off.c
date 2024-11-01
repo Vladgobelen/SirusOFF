@@ -24,14 +24,14 @@ int main()
             pclose(TwoNull);
             printf ("%ld\n", line1);
             printf ("%s\n", line);
-/*
+
             FILE *TwoStr;
             int lineSi;
             char lineS;
             TwoStr = popen("netstat |grep '7776 ESTABLISHED' | wc -l", "r");
             lineS = fgetc(TwoStr);
             lineSi = lineS - '0';
-            printf ("%d\n", lineSi);
+            printf ("%s\n", lineSi);
             pclose(TwoStr);
             if (lineS != '2')
             {
@@ -39,9 +39,9 @@ int main()
                 printf ("Строк меньше двух\n");
                 printf ("%c\n", lineS);
             }
-            printf ("%c\n", lineS);
+            printf ("%d\n", lineS);
             system ("sleep 30");
-  */
+
 
         }
 
